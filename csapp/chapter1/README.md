@@ -88,4 +88,14 @@ hello.c 를 시스템에서 실행시키려면, 저급 *기계어 인스트럭�
         * Store 레지스터에서 메인 메모리로 바이트 또는 워드를 이전 값을 덮어씌움
         * Operate 두 레지스터의 값을 ALU 로 복사 -> 두 개의 워드로 수식 연산 후 덮어씌움
         * Jump 인스트럭션 자신으로부터 워드 추출 PC 에 덮어씌움
-    
+# 4.2 hello 프로그램의 실행
+* 쉘 프로그램은 자신의 인스트럭션 실행
+* 사용자 명령 입력 대기
+* 입력되면 문자를 레지스터에 읽어드림
+* 메모리 저장
+1. I/O 장치 ->  I/O bus 를 통해 -> I/O bridge -> System bus 를 통해 -> Bus interface -> Register file -> System bus 를 통해 -> I/O bridge -> Memory bus 를 통해 -> Main memory
+2. Disk -> I/O bus 를 통해 -> I/O bridge -> Memory bus 를 통해 -> Main memory
+3. Main memory -> Memory bus 를 통해 -> I/O bridge -> System bus 를 통해 -> Bus interface -> Register file -> Bus interface -> System bus 를 통해 -> I/O bridge -> I/O bus 를 통해 -> Display
+1. 키보드 입력
+2. 실행 파일 로드
+3. 출력
