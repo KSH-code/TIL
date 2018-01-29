@@ -96,6 +96,51 @@ hello.c 를 시스템에서 실행시키려면, 저급 *기계어 인스트럭�
 1. I/O 장치 ->  I/O bus 를 통해 -> I/O bridge -> System bus 를 통해 -> Bus interface -> Register file -> System bus 를 통해 -> I/O bridge -> Memory bus 를 통해 -> Main memory
 2. Disk -> I/O bus 를 통해 -> I/O bridge -> Memory bus 를 통해 -> Main memory
 3. Main memory -> Memory bus 를 통해 -> I/O bridge -> System bus 를 통해 -> Bus interface -> Register file -> Bus interface -> System bus 를 통해 -> I/O bridge -> I/O bus 를 통해 -> Display
+
+.
 1. 키보드 입력
 2. 실행 파일 로드
 3. 출력
+# 5 캐시가 중요하다
+정보를 한 곳에서 한 곳으로 이동하는 것은 많은 시간이 소모된다.
+
+본래에 하드디스크에 존재하던 기계어 인스트럭션들을 메모리에 복사되고, 메모리에 있는 스트링은 디스플레이 장치로 복사된다.
+
+이런 복사과정들이 "실제 작업"을 느리게 하는 오버헤드다.
+
+물리학의 법칙 때문에 더 큰 저장장치들은 보다 작은 저장장치들보다 느린 속도를 가진다.
+
+캐시 메모리라고 부르는 저장장치를 고안하여 프로세서가 단기간에 필요로 할 가능성이 높은 정보를 임시로 저장할 목적으로 사용한다.
+
+* Main memory -> Memory bus 를 통해 -> I/O bridge -> System bus 를 통해 -> Bus interface -> Register file -> ALU -> Register file -> Cache memories <=> Bus interface
+레지스터에 계속 접근하지 않고, 자주 사용하는 데이터는 Cache memory 에 저장되는거 같다.
+
+프로세서가 액세스 할 경우
+* L1 cache 는 L2 cache 보다 5배 정도 빠르다.
+* L2 cache 는 메인 메모리 보다 5 ~ 10 배 빠르다.
+하지만 수치는 정확하지 않고, 변할 가능성이 크므로 신뢰하지 말자.
+L1, L2 cache 는 SRAM (Static Random Access Memory) 라는 하드웨어 기술을 이용해 구현한다.
+
+새롭고 강력한 시스템은 심지어 3단계의 캐시를 갖는 경우도 있다.
+
+L1, L2, L3
+
+캐시 시스템의 이면에 깔려 있는 아이디어는 프로그램이 지엽적인 영역의 코드와 데이터를 액세스하는 경향인 지역성을 활용하여 시스템이 매우 크고 빠른 메모리 효과를 얻을 수 있다는 것이다.
+
+캐시 메모리를 활용하면 성능이 많이 개선된다.
+# 6 저장장치들은 계층구조를 이룬다.
+캐시메모리를 프로세서와 좀 더 크고 느린 (메인 메모리) 사이에 끼워 넣는 개념은 일반적인 아이디어로 판명 되었다.
+* L0: Register
+* L1: SRAM
+* L2: SRAM
+* L3: SRAM
+* L4: DRAM (Main memory)
+* L5: Local secondary storage (local disk)
+* L6: Remote secondary storage (web server, distributed file systems)
+가격은 0 -> 6 으로 갈수록 비싸지고, 용량은 커진다.
+
+메모리 계층구조의 주요 아이디어는 한 레벨의 저장장치가 다음 하위레벨 저장장치의 캐시 역할을 한다는 것이다.
+
+예를 들어서, L4 에 많이 사용하는 데이터는 L3 에 저장할 수 있다는 것이다.
+
+그러면 L4 의 캐시 메모리는 L3 이다.
