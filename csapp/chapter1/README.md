@@ -137,6 +137,7 @@ L1, L2, L3
 * L4: DRAM (Main memory)
 * L5: Local secondary storage (local disk)
 * L6: Remote secondary storage (web server, distributed file systems)
+
 가격은 0 -> 6 으로 갈수록 비싸지고, 용량은 커진다.
 
 메모리 계층구조의 주요 아이디어는 한 레벨의 저장장치가 다음 하위레벨 저장장치의 캐시 역할을 한다는 것이다.
@@ -144,3 +145,24 @@ L1, L2, L3
 예를 들어서, L4 에 많이 사용하는 데이터는 L3 에 저장할 수 있다는 것이다.
 
 그러면 L4 의 캐시 메모리는 L3 이다.
+# 7 운영체제는 하드웨어를 관리한다.
+hello 예제를 보면 쉘 프로그램이 로드하고,
+* 실행할 때
+* 출력할 때
+프로그램이 직접 하드웨어를 액세스 하지 않았다.
+
+OS 가 제공하는 서비스를 이용한다.(system call)
+
+운영체제는 두 가지 주요 목적을 가지고 있다.
+1. 제멋대로 동작하는 응용프로그램들이 하드웨어를 잘못 사용하는 것을 막기 위해
+2. 응용프로그램들이 단순하고 균일한 메커니즘을 사용하여 복잡하고 매우 다른 저수준 하드웨어 장치들을 조작할 수 있도록 하기 위해
+```
+        (Application programs) S/W
+
+                (OS) S/W
+
+(Processor | Main memory | I/O devices) H/W
+```
+추상화 한 형태다.
+
+Application 은 하드웨어를 사용할 때, system call 을 이용한다.
