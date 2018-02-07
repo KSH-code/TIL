@@ -1,0 +1,89 @@
+3.1 프로세스
+## 프로세스의 상태
+* Running
+    * CPU 를 잡고 instruction 실행 중
+* Ready
+    * CPU 를 기다림 (메모리, I/O 등 을 다 완료하고, CPU 만 실행되면 됨)
+* Blocked (wait, sleep)
+    * I/O 등의 event 를 (스스로) 기다림 ex ) 디스크에서 load file
+    * 자신이 요청한 event 가 만족되면 Ready
+* Suspended (stopped)
+    * 외부적인 이유로 프로세스의 수행이 정지
+    * 프로세스는 통째로 디스크에 swap out
+    * (예) 사용자가 프로그램을 일시 정지 시킴
+    * 외부에서 resume 해 주어야 Active
+## 프로세스 상태도
+1. new (실행중 메모리를 얻으면 ready 로)
+2. ready (scheduler dispatch 가 되면 running 으로)
+3. running (Timer interrupt 가 되면 ready 로, exit 되면 terminated 로, I/O or event wait 이 일어나면 wating 으로(blocked))
+4. wating (I/O or event 가 끝나면 ready 로)
+## Context Switch
+PCB 에 문맥 전환이 일어날 때, 프로세스의 정보를 저장한다.
+
+그리고 그 프로세스로 다시 돌아갈 때, PCB 에서 그 프로세스의 정보를 불러온다.
+
+* System call : Process 가 운영체제의 도움이 필요해 인터럽트를 건다.
+* 하드웨어 인터럽트 : 컨트롤러나 하드웨어의 장치에게 뭔가 전달할 때
+운영체제에게 권한이 넘어간다.
+
+이것은 Context Switch 가 아니다.
+
+Process -> Process 가 Context Switch (O)
+
+Process -> O/S Context Switch (X)
+
+O/S -> 인터럽트가 난 프로세스로 다시 가는경우 Context Switch (X)
+
+O/S -> 인터럽트가 난 프로세스가 아닌 다른 프로세스로 가는 경우 Context Switch (O)
+
+Interrupt 가 들어오면 운영체제가 Interrupt System Routine(ISR) 을 실행
+
+(Timer interrupt, I/O 요청) 가 들어오면 운영체제 커널은 다른 프로세스에게 권한을 줌
+
+cache memory 는 main memory 윗 단계
+
+context switch 가 일어나면 cache memory 를 다 지워야 된다. ( 이 전 사용하던 )
+
+user mode -> kernel mode -> user mode 는 cache memory flush 가 일어나지 않는다.
+## Queue
+* Job queue : 현재 시스템 내에 있는 모든 프로세스 집합
+* Ready queue : 현재 메모리 내에 있으면서 CPU 를 잡아서 실행되기를 기다리는 프로세스의 집합
+* Device queues : I/O device 의 처리를 기다리는 프로세스의 집합
+
+프로그램 실행 -> Ready queue 에 들감 -> 차례가 되면 CPU 얻음 -> 시간 제한 초과 -> 다시 대기 -> 또 시작 -> I/O 가 필요하면 -> I/O queue 에 들감 -> 시작
+
+인터럽트가 발생하면, Ready queue 로 가는게 아니다.
+
+그리고 만약 자식 프로세스를 만들면, Ready queue 로 간다.
+## Scheduler
+* Long-term scheduler (job scheduler)
+    * 시작 프로세스 중 어떤 것들을 ready queue 로 보낼지
+    * 프로세스에 각종 자원을 주는 문제 (메모리나 다른 자원)
+    * degree of Multiprogramming (메모리에 여러 프로세스가 올라간다.) (degree of Multiprogramming =. 메모리에 올라가는 프로세스의 수)
+    * time sharing system 에는 보통 장기 스케줄러가 없음 (무조건 ready)
+* Short-term scheduler (CPU scheduler)
+    * 어떤 프로세스를 다음번에 running 시킬지
+    * 프로세스에 CPU 를 주는 문제
+    * 충분히 빨라야 함 (millisecond 단위)
+* Medium-Term scheduler (Swapper)
+    * 여유 공간 마련을 위해 프로세스를 통째로 메모리에서 디스크로 쫓아냄
+    * 프로세스에게서 memmory 를 뺏는 문제
+    * degree of Multiprogramming 을 제어
+지금의 시스템은 Long-term scheduler 가 없다. (Time sharing)
+
+Medium-Term scheduler 를 사용한다.
+
+Long-term scheduler 는 메모리를 주는 역할
+
+Medium-Term scheduler 는 메모리를 뺏는 역할
+
+Medium-Term scheduler 가 프로세스 상태를 Suspended 로 한다. (메모리에 너무 많은 프로세스가 올라옴)
+## 프로세스 상태도
+1. Running (user mode) : 그냥 실행 중
+2. Running (monitor mode) : system call, interrupt, trap
+3. Ready
+4. Blocked
+5. New
+6. Exit
+7. Suspended Blocked (Block 에 의해서 Suspended 가 됨) I/O 가 오래걸리는 작업이 끝나면 Suspended Ready 로 변경될 수 있다.
+8. Suspended Ready (Ready 에 의해서 Suspended 가 됨)
