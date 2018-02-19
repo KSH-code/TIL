@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="button0">a</button>
+  <button id="button1">b</button>
+  <button id="button2">c</button>
+  <br>
+  <button id="buttonn0">a</button>
+  <button id="buttonn1">b</button>
+  <button id="buttonn2">c</button>
+  <script>
+    function hookupevents1 () {
+      for (var i = 0; i < 3; i++) {
+        document.getElementById("button" + i)
+          .addEventListener("click", function () {
+            alert(i);
+        });
+      }
+    }
+    hookupevents1()
+    function hookupevents2 () {
+      for (var i = 0; i < 3; i++) {
+        (function (i) {
+          document.getElementById("buttonn" + i)
+            .addEventListener("click", function () {
+              alert(i);
+          });
+        })(i)
+      }
+    }
+    hookupevents2()
+  </script>
+</body>
+</html>

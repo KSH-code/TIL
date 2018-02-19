@@ -2,3 +2,4 @@
 * [algorithm](algorithm/)
 * [csapp](csapp/)
 * [operating-system](operating-system/)
+* [others](others/)
