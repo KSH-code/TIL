@@ -1,4 +1,5 @@
 # [원문](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+# [번역본](https://nodejs.org/ko/docs/guides/event-loop-timers-and-nexttick/)
 # 이벤트 루프란 무엇인가요?
 이벤트 루프는 Node.js 가 non-blocking I/O 연산을 사용할 수 있게 합니다.
 
@@ -38,3 +39,23 @@ Node.js 가 실행될 때, 이벤트 루프가 초기화하고, 비동기 API �
 └──┤    close callbacks    │
    └───────────────────────┘
 ```
+각 단계는 실행할 콜백의 FIFO queue 대기열이 있습니다.
+
+각 단계는 각자의 방식으로 특별하지만, 일반적으로 이벤트 루프에 단계에 들어가면 해당 단계와 관련된 모든 작업이 수행됩니다.
+
+그런 다음 queue 가 모두 사라지거나 최대 콜백수가 실행될 떄 까지 큐의 단계들은 실행됩니다.
+
+큐가 모두 사용되거나 콜백의 한계에 다다르면 이벤트 루프는 다음 단계로 이동합니다.
+
+이러한 작업이 또 다른작업을 schedule(관리) 하거나 poll 단계에서 처리된 새로운 이벤트가 커널에 의해 큐에 추가될 수 있으므로 poll 이벤트를 처리하면서 poll 이벤트를 큐에 추가할 수 있습니다.
+
+따라서 킨 콜백을 사용하면 타이머 임계값보다 훨씬 더 긴 poll 단계를 실행할 수 있습니다.
+## 단계 보기
+* timers: 타이머는 콜백을 관리하는 단계입니다. by `setTimeout` and `setInterval`
+* I/O callbacks: 타이머에 의해 관리된 것, `setImmediate`, close callbacks 을 제외하고 거의 모든 콜백은 실행됩니다.
+* idle, prepare: 내부적으로 실행됩니다.
+* poll: 새로운 I/O 이벤트들을 찾아옵니다. 적절한 시기에 노드가 여기서 차단됩니다.
+* check: `setImmediate` callbacks 는 여기서 실행됩니다.
+* close callbacks: e.g `socket.on('close')`
+
+각 이벤트 루프 실행 사이에 Node.js 는 비동기식 I/O 와 timers를 기다리고 있는지 기다리고 있으며, 없으면 완전히 종료합니다.
