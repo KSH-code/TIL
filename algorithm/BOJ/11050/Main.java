@@ -17,8 +17,8 @@ public class Main {
         int result = 1;
 
         // N! / (K! * (N - K)!)
-        for (int i = K + 1; i <= N; i++) result = (result * i) % 10007;
-        for (int i = 2; i <= N - K; i++) result = result / i;
+        for (int i = K + 1; i <= N; i++) result *= i;
+        for (int i = 2; i <= N - K; i++) result /= i;
         
         bw.write(String.valueOf(result));
 
