@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/contest/problem/11051
+ * https://www.acmicpc.net/problem/11051
  * BOJ 백준온라인져지 11051 이항 계수 2 풀이
  */
 public class Main {

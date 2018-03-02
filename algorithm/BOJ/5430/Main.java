@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/contest/problem/5430
+ * https://www.acmicpc.net/problem/5430
  * BOJ 백준온라인져지 5430 AC 풀이
  */
 public class Main {

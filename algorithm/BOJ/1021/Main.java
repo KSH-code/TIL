@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 /**
- * https://www.acmicpc.net/contest/problem/1021
+ * https://www.acmicpc.net/problem/1021
  * BOJ 백준온라인져지 1021 회전하는 큐 풀이
  */
 public class Main {

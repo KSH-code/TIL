@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/contest/problem/15552
+ * https://www.acmicpc.net/problem/15552
  * BOJ 백준온라인져지 15552 빠른 A+B 풀이
  */
 public class Main {
