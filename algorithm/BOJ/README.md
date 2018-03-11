@@ -7,6 +7,8 @@ int (*p)[N] = new int[M][N];
 * https://ps.kajebiii.ga/chest/boj/
 # 푼 문제
 ## 동아리
+* [15565](15565/Main.java)
+* [15562](15562/Main.java) (못품)
 * [2669](2669/Main.java)
 * [2668](2668/Main.java)
 * [2667](2667/Main.java)
