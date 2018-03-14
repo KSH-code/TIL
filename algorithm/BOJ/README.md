@@ -10,6 +10,8 @@ int (*p)[N] = new int[M][N];
 * [14645](14645/Main.txt)
 * [15565](15565/Main.java)
 * [15596](15596/Main.cpp)
+* [9506](9506/Main.java)
+* [1094](1094/Main.java)
 * [15565](15565/Main.java)
 * [15562](15562/Main.java)
 * [2669](2669/Main.java)
