@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/problem/2565
- * BOJ 백준온라인져지 2565 전깃줄 풀이
+ * https://www.acmicpc.net/problem/2564
+ * BOJ 백준온라인져지 2564 경비원 풀이
  */
 public class Main {
     static class Position {
