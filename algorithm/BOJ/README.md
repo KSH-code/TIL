@@ -8,6 +8,7 @@ int (*p)[N] = new int[M][N];
 # 푼 문제
 ## 동아리
 * [2565](2565/Main.java)
+* [2564](2564/Main.java)
 * [2563](2563/Main.java)
 * [2562](2562/Main.java)
 * [2580](2580/Main.java)
