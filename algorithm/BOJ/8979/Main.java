@@ -3,7 +3,7 @@ import java.io.*;
 
 /**
  * https://www.acmicpc.net/problem/8979
- * BOJ 백준온라인져지 8979 저울 풀이
+ * BOJ 백준온라인져지 8979 올림픽 풀이
  */
 public class Main {
     static class Country {
