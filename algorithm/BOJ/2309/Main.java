@@ -25,14 +25,14 @@ public class Main{
                 if(i==j) continue;
                 if(all-d[i]-d[j] == 100){
                     d[j]=d[i]=Integer.MAX_VALUE;
+                    Arrays.sort(d);
+                    for(int z = 0; z<7; z++){
+                        bw.write(d[z] + "\n");
+                    }
+                    i = j = 1000;
                 }
             }
         }
-        Arrays.sort(d);
-        for(int i = 0; i<7; i++){
-            bw.write(d[i] + "\n");
-        }
         bw.flush();
-
     }
 }
