@@ -3,7 +3,7 @@ import java.io.*;
 
 /**
  * https://www.acmicpc.net/problem/12755
- * BOJ 백준온라인져지 12755 다음수 풀이
+ * BOJ 백준온라인져지 12755 수면 장애 풀이
  */
 public class Main {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
