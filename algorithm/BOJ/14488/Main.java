@@ -25,7 +25,7 @@ public class Main {
             min = Math.max(min, velocity * -T + position[i]);
             max = Math.min(max, velocity * T + position[i]);
         }
-        if (min > max + 1e-08) bw.write("0");
+        if (min > max + 1e-04) bw.write("0");
         else bw.write("1");
         bw.flush();
     }
