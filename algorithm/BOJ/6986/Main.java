@@ -21,9 +21,9 @@ public class Main {
         for (int i = 0; i + 2 * K < N; i++) {
             sum += arr[i + K];
         }
-        System.out.println(String.format("%.3g", sum / (N - 2 * K) + 1e-6));
+        System.out.println(String.format("%.3g", sum / (N - 2 * K) + 1e-8));
         sum += (arr[K] + arr[N - 1 - K]) * K;
-        System.out.println(String.format("%.3g", sum / N + 1e-6));
+        System.out.println(String.format("%.3g", sum / N + 1e-8));
         bw.flush();
     }
 }
