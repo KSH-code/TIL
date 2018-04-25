@@ -9,24 +9,20 @@ public class Main {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     public static void main (String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
+        br.readLine();
         String str1[] = br.readLine().split(" ");
         int max = 0;
         int maxIndex = 0;
-        for (int i = 0; i < N; i++) {
+        int result = 0;
+        for (int i = 0; i < str1.length; i++) {
             int level = Integer.parseInt(str1[i]);
             if (max < level) {
                 max = level;
                 maxIndex = i;
             }
+            result += level;
         }
-        int result = 0;
-        for (int i = 0; i < maxIndex; i++) {
-            result += Integer.parseInt(str1[i]) + max;
-        }
-        for (int i = N - 1; i > maxIndex; i--) {
-            result += Integer.parseInt(str1[i]) + max;
-        }
+        result += max * (str1.length - 2);
         bw.write(String.valueOf(result));
         bw.flush();
     }
