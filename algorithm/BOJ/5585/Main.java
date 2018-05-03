@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/problem/13699
- * BOJ 백준온라인져지 13699 점화식 풀이
+ * https://www.acmicpc.net/problem/5585
+ * BOJ 백준온라인져지 5585 거스름돈 풀이
  */
 public class Main {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -11,14 +11,14 @@ public class Main {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        long t[] = new long[N + 1];
-        t[0] = 1;
-        for (int i = 1; i <= N; i++) {
-            for (int j = 0; j < i; j++) {
-                t[i] += t[j] * t[i - 1 - j];
-            }
+        N = 1000 - N;
+        int t[] = {500,100,50,10,5,1};
+        int cnt = 0;
+        for (int i = 0; i < 6; i++) {
+            cnt += N / t[i];
+            N -= (N / t[i]) * t[i];
         }
-        bw.write(String.valueOf(t[N]));
+        bw.write(String.valueOf(cnt));
         bw.flush();
     }
 }
