@@ -13,9 +13,8 @@ public class Main {
         int S = Integer.parseInt(str1[0]);
         int C = Integer.parseInt(str1[1]);
         int arr[] = new int[S];
-        long sum = 0;
         for (int i = 0; i < S; i++) {
-            sum += arr[i] = Integer.parseInt(br.readLine());
+            arr[i] = Integer.parseInt(br.readLine());
         }
         Arrays.sort(arr);
         int l = 1;
