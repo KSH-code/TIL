@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/problem/1182
- * BOJ 백준온라인져지 1182 부분집합의 합 풀이
+ * https://www.acmicpc.net/problem/14501
+ * BOJ 백준온라인져지 14501 퇴사 풀이
  */
 public class Main {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
