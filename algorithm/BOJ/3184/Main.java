@@ -7,13 +7,6 @@ import java.io.*;
  */
 public class Main {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    static class Pos {
-        public int x, y;
-        public Pos (int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
     private static int v = 0;
     private static int o = 0;
     private static int R;
