@@ -4,6 +4,7 @@ int (*p)[N] = new int[M][N];
 # 푼 문제
 * [10820](10820/Main.java)
 * [14563](14563/Main.java)
+* [12785](12785/Main.java)
 * [5533](5533/Main.java)
 * [3184](3184/Main.java)
 * [3020](3020/Main.java)
