@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/problem/1012
- * BOJ 백준온라인져지 1012 유기농 배추 풀이
+ * https://www.acmicpc.net/problem/9465
+ * BOJ 백준온라인져지 9465 스티커 풀이
  */
 public class Main {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
