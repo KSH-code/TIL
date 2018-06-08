@@ -13,10 +13,9 @@ public class Main {
         int dp[][] = new int[N + 1][10];
         for (int i = 0; i < 10; i++) dp[1][i] = 1;
         for (int i = 2; i <= N; i++) {
-            for (int j = 0; j < 10; j++) {
-                for (int k = j; k < 10; k++) {
-                    dp[i][j] += dp[i - 1][k];
-                }
+            dp[i][0] = dp[i - 1][0];
+            for (int j = 1; j < 10; j++) {
+                dp[i][j] += dp[i - 1][j] + dp[i][j - 1];
                 dp[i][j] %= 10007;
             }
         }
