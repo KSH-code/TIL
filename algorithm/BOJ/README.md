@@ -2,6 +2,7 @@
 int (*p)[N] = new int[M][N];
 ```
 # 푼 문제
+* [2446](2446/Main.java)
 * [11048](11048/Main.java)
 * [2475](2475/Main.java)
 * [11057](11057/Main.java)
