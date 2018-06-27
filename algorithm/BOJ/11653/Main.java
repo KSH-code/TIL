@@ -17,7 +17,7 @@ public class Main {
                 bw.write("\n");
             }
         }
-        if (N > 0) bw.write(String.valueOf(N));
+        if (N > 1) bw.write(String.valueOf(N));
         bw.flush();
     }
 }
