@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 /**
- * https://www.acmicpc.net/problem/4999
- * BOJ 백준온라인져지 4999 트리 순회 풀이
+ * https://www.acmicpc.net/problem/1991
+ * BOJ 백준온라인져지 1991 트리 순회 풀이
  */
 public class Main {
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
