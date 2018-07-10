@@ -27,7 +27,6 @@ public class Main {
     private static int xxxx[] = { -1, 0, 1, 0 };
     private static int yyyy[] = { 0, 1, 0, -1 };
     private static int dfs (int x, int y) {
-        if ((check & (1 << map[x][y])) > 0) return 0;
         check |= 1 << map[x][y];
         int result = 1;
         for (int i = 0; i < 4; i++) {
