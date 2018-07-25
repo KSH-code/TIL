@@ -1,7 +1,5 @@
-```
-int (*p)[N] = new int[M][N];
-```
 # 푼 문제
+* [1074](1074/Main.java)
 * [1922](1922/Main.java)
 * [1373](1373/Main.java)
 * [10162](10162/Main.java)
