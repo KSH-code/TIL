@@ -42,7 +42,7 @@ public class Main {
                 }
             } else if (n >= s) {
                 if (m < e) {
-                    w = (m - s + 1) * l;
+                    w = (m - s) * l;
                 } else {
                     w = (e - n + 1) * l;
                 }
