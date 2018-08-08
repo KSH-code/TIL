@@ -15,25 +15,24 @@ public class Main {
 
         while (testcase-- > 0) {
             int N = Integer.parseInt(br.readLine());
-            int chapter[] = new int[N + 1];
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int pSum[] = new int[N + 1];
             int dp[][] = new int[N + 1][N + 1];
-            String str1[] = br.readLine().split(" ");
             for (int i = 1; i <= N; i++) {
-                chapter[i] = chapter[i - 1] + Integer.parseInt(str1[i - 1]);
+                pSum[i] = pSum[i - 1] + Integer.parseInt(st.nextToken());
             }
-            for (int i = 1; i < N; i++) {
-                for (int j = i + 1; j <= N; j++) {
-                    dp[i][j] = 987654321;
-                    for (int k = i; k <= j; k++) {
-                        int temp = dp[i][k] + dp[k][j];
-                        if (dp[i][j] > temp) dp[i][j] = temp;
+            for (int i = 2; i <= N; i++) {
+                for (int j = i - 1; j > 0; j--) {
+                    dp[j][i] = 987654321;
+                    for (int k = j; k < i; k++) {
+                        dp[j][i] = Math.min(dp[j][i], dp[j][k] + dp[k + 1][i]);
                     }
-                    dp[i][j] += chapter[i] - chapter[j];
+                    dp[j][i] += pSum[i] - pSum[j - 1];
                 }
             }
-            bw.write((dp[1][N]) + "\n");
+            bw.write(String.valueOf(dp[1][N]));
+            bw.write("\n");
         }
-
         bw.flush();
     }
 }
