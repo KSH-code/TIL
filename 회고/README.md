@@ -1,7 +1,7 @@
 # 2018-08-06 ~ 2018-08-12
 ## 다음주 주말에 할 일
-    - [ ] 리액트 Storybook 사용해보기
-    - [ ] Mongodb 의 $ 알아보기
+- [x] [리액트 Storybook 사용해보기](React-Storybook/)
+- [x] [Mongodb 의 $ 알아보기](what-does-mean-dollar-in-mongodb/)
 ## 풀이한 문제 목록
 * BOJ 백준온라인져지 1629 곱셈 풀이
 * BOJ 백준온라인져지 1357 뒤집힌 덧셈 풀이
