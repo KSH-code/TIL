@@ -1,5 +1,5 @@
 # TODO
-- [ ] 브라우저 작동 원리 알아보기
+- [x] [브라우저 작동 원리 알아보기](https://github.com/KSH-code/Technical-Interview/tree/master/other/how-to-running-browser)
 - [ ] 세그먼트 트리
 - [ ] 토이 프로젝트
 - [ ] 개인적인 업무 (주말마다 하기로 함)
