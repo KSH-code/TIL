@@ -1,6 +1,7 @@
 # TODO
-- [ ] 토이 프로젝트
+- [ ] 브라우저 작동 원리 알아보기
 - [ ] 세그먼트 트리
+- [ ] 토이 프로젝트
 - [ ] 개인적인 업무 (주말마다 하기로 함)
 - [x] [리액트 Storybook 사용해보기](React-Storybook/)
 - [x] [Mongodb 의 $ 알아보기](what-does-mean-dollar-in-mongodb/)
