@@ -1,10 +1,13 @@
 # TODO
 - [x] [브라우저 작동 원리 알아보기](https://github.com/KSH-code/Technical-Interview/tree/master/other/how-to-running-browser)
-- [ ] 세그먼트 트리
+- [x] 세그먼트 트리
 - [ ] 토이 프로젝트
 - [ ] 개인적인 업무 (주말마다 하기로 함)
 - [x] [리액트 Storybook 사용해보기](React-Storybook/)
 - [x] [Mongodb 의 $ 알아보기](what-does-mean-dollar-in-mongodb/)
+## 읽어보면 좋은것
+- [ ] [FE & CS](https://yuchengkai.cn/docs/frontend)
+- [ ] [FE Performance](https://github.com/thedaviddias/Front-End-Performance-Checklist)
 # 2018-08-13 ~ 2018-08-19
 ## 풀이한 문제 목록
 * BOJ 백준온라인져지 2169 로봇 조종하기 풀이
