@@ -12,7 +12,7 @@ public class Main {
         int testcase = Integer.parseInt(br.readLine());
         boolean isPrimeNumber[] = new boolean[10000];
         for (int i = 2; i < 10000; i++) isPrimeNumber[i] = true;
-        for (int i = 2; i < 10000; i++) {
+        for (int i = 2; i <= 100; i++) {
             if (isPrimeNumber[i]) {
                 for (int j = i * i; j < 10000; j += i) isPrimeNumber[j] = false;
             }
@@ -31,10 +31,11 @@ public class Main {
                 }
                 int cnt = q.poll() / 10000;
                 isVisited[s] = true;
+                int f = 10000;
                 for (int i = 3; i >= 0; i--) {
+                    f /= 10;
                     for (int j = 0; j <= 9; j++) {
                         int tempS = s;
-                        int f = (int) Math.pow(10, i);
                         tempS -= tempS / f % 10 * f;
                         tempS += f * j;
                         if (tempS >= 1000 && tempS <= 9999 && !isVisited[tempS] && isPrimeNumber[tempS]) q.offer(tempS + 10000 * (cnt + 1));
