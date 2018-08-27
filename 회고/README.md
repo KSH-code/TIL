@@ -2,12 +2,29 @@
 - [x] [브라우저 작동 원리 알아보기](https://github.com/KSH-code/Technical-Interview/tree/master/other/how-to-running-browser)
 - [x] 세그먼트 트리
 - [ ] 토이 프로젝트
-- [ ] 개인적인 업무 (주말마다 하기로 함)
 - [x] [리액트 Storybook 사용해보기](React-Storybook/)
 - [x] [Mongodb 의 $ 알아보기](what-does-mean-dollar-in-mongodb/)
 ## 읽어보면 좋은것
 - [ ] [FE & CS](https://yuchengkai.cn/docs/frontend)
 - [ ] [FE Performance](https://github.com/thedaviddias/Front-End-Performance-Checklist)
+# 2018-08-20 ~ 2018-08-26
+## 풀이한 문제 목록
+* BOJ 백준온라인져지 11966 2의 제곱인가? 풀이
+* BOJ 백준온라인져지 1850 최대공약수 풀이
+* BOJ 백준온라인져지 1963 소수 경로 풀이
+* BOJ 백준온라인져지 1748 수 이어 쓰기 1 풀이
+* BOJ 백준온라인져지 2851 슈퍼 마리오 풀이
+* BOJ 백준온라인져지 11725 트리의 부모 찾기 풀이
+* BOJ 백준온라인져지 10448 유레카 이론 풀이
+* BOJ 백준온라인져지 10868 최소값 풀이
+* BOJ 백준온라인져지 10164 격자상의 경로 풀이
+* BOJ 백준온라인져지 9325 얼마? 풀이
+## 한 일들
+1. NYPC 문제를 풀었다.
+
+    열심히 풀어서 특별상을 노릴까? 했는데 개인적인 바쁜일이 있어서 더이상 진행을 하지 못하게 됐다/
+
+    1 라운드 문제를 나오자마자 올솔브 하고 그만두기로 생각했다. (5회차는 너무많음;;)
 # 2018-08-13 ~ 2018-08-19
 ## 풀이한 문제 목록
 * BOJ 백준온라인져지 2169 로봇 조종하기 풀이
