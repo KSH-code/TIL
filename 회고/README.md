@@ -8,6 +8,7 @@
 - [ ] [FE & CS](https://yuchengkai.cn/docs/frontend)
 - [ ] [FE Performance](https://github.com/thedaviddias/Front-End-Performance-Checklist)
 # 2018-09-10 ~ 2018-09-16
+![asset/2018-09-17.png](hh)
 ## 풀이한 문제 목록
 * BOJ 백준온라인져지 2661 좋은수열 풀이
 * BOJ 백준온라인져지 1208 부분집합의 합 2 풀이
