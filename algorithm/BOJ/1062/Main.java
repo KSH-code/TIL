@@ -34,7 +34,6 @@ public class Main {
         bw.flush();
     }
     private static void dfs (int x, int k) {
-        if (k > 26) return;
         if (x == 0) {
             int cnt = N;
             for (int i = 0; i < N; i++) {
@@ -48,6 +47,7 @@ public class Main {
             result = Math.max(result, cnt);
             return;
         }
+        if (k > 25) return;
         if ((check & (1 << k)) == 0) {
             check |= 1 << k;
             dfs(x - 1, k + 1);
