@@ -1,9 +1,12 @@
-# TODO
-- [x] [브라우저 작동 원리 알아보기](https://github.com/KSH-code/Technical-Interview/tree/master/other/how-to-running-browser)
-- [x] 세그먼트 트리
-- [ ] 토이 프로젝트
-- [x] [리액트 Storybook 사용해보기](React-Storybook/)
-- [x] [Mongodb 의 $ 알아보기](what-does-mean-dollar-in-mongodb/)
+# 공부 순서
+1. 수1, 수2
+2. 미적분 1
+3. 미적분 2
+4. 이산 수학
+5. 선형 대수학
+6. 자료 구조
+7. 컴퓨터 아키텍쳐
+8. 운영체제
 ## 읽어보면 좋은것
 - [ ] [FE & CS](https://yuchengkai.cn/docs/frontend)
 - [ ] [FE Performance](https://github.com/thedaviddias/Front-End-Performance-Checklist)
