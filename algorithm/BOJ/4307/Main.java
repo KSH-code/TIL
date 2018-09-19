@@ -18,7 +18,7 @@ public class Main {
             int max = 0;
             for (int i = 0; i < N; i++) {
                 int temp = Integer.parseInt(br.readLine());
-                max = Math.max(max, L - temp);
+                max = Math.max(max, Math.max(L - temp, temp));
                 min = Math.max(min, Math.min(temp, L - temp));
             }
             bw.write(min + " " + max + "\n");
