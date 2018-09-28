@@ -10,6 +10,18 @@
 ## 읽어보면 좋은것
 - [ ] [FE & CS](https://yuchengkai.cn/docs/frontend)
 - [ ] [FE Performance](https://github.com/thedaviddias/Front-End-Performance-Checklist)
+# 2018-09-17 ~ 2018-09-23
+## 풀이한 문제 목록
+* BOJ 백준온라인져지 15953 상금 헌터 풀이
+* BOJ 백준온라인져지 1790 수 이어 쓰기 2 풀이
+* BOJ 백준온라인져지 15927 회문은 회문아니야!! 풀이
+* BOJ 백준온라인져지 15740 A+B - 9 풀이
+* BOJ 백준온라인져지 4307 개미 풀이
+* BOJ 백준온라인져지 2703 Cryptoquote 풀이
+* BOJ 백준온라인져지 1673 치킨 쿠폰 풀이
+* BOJ 백준온라인져지 1793 타일링 풀이
+* BOJ 백준온라인져지 1062 가르침 풀이
+* BOJ 백준온라인져지 15975 화살표 그리기 풀이
 # 2018-09-10 ~ 2018-09-16
 ![asset/2018-09-17.png](hh)
 ## 풀이한 문제 목록
