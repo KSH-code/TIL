@@ -10,7 +10,16 @@
 ## 읽어보면 좋은것
 - [ ] [FE & CS](https://yuchengkai.cn/docs/frontend)
 - [ ] [FE Performance](https://github.com/thedaviddias/Front-End-Performance-Checklist)
-# 2018-09-24 ~ 2018-09-30
+# 2018-10-01 ~ 2018-10-07
+## 풀이한 문제 목록
+* BOJ 백준온라인져지 2266 금고 테스트 풀이
+* BOJ 백준온라인져지 1013 Contact 풀이
+* BOJ 백준온라인져지 16169 수행 시간 풀이
+* BOJ 백준온라인져지 7453 합이 0인 네 정수 풀이
+## 다짐
+1. 수학 공부 진짜 제대로 다시 시작
+2. 알고리즘은 기초부터 다지자(자료 구조)
+# 2018-10-24 ~ 2018-09-30
 ## 풀이한 문제 목록
 * BOJ 백준온라인져지 2631 줄세우기 풀이
 * BOJ 백준온라인져지 2857 FBI 풀이
