@@ -13,9 +13,12 @@ public class Main {
         long X = Long.parseLong(st.nextToken());
         long K = Long.parseLong(st.nextToken());
         long Y = 0;
-        for (int i = 0, j = 0; j < 32; i++, j++) {
+        for (int i = 0, j = 0; K > 0; i++, j++) {
             while (((1L << i) & X) > 0) i++;
-            if (((1 << j) & K) > 0) Y |= 1L << i;
+            if (((1 << j) & K) > 0) {
+                Y += 1L << i;
+                K -= 1 << j;
+            }
         }
         bw.write(String.valueOf(Y));
         bw.flush();
