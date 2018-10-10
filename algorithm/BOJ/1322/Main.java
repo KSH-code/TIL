@@ -12,18 +12,12 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         long X = Long.parseLong(st.nextToken());
         long K = Long.parseLong(st.nextToken());
-        ArrayList<Integer> temp = new ArrayList<>();
-        for (int i = 0; i <= 31; i++) {
-            if ((X & (1 << i)) == 0) {
-                temp.add(i);
-            }
+        long Y = 0;
+        for (int i = 0, j = 0; j < 32; i++, j++) {
+            while (((1L << i) & X) > 0) i++;
+            if (((1 << j) & K) > 0) Y |= 1L << i;
         }
-        long result = 0;
-        int t = 0;
-        for (int i = 0; i <= 31; i++) {
-            if ((i + 1 % K) == 1) result += 1 << temp.get(t++);
-        }
-        bw.write(String.valueOf(result));
+        bw.write(String.valueOf(Y));
         bw.flush();
     }
 }
