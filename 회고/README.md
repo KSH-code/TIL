@@ -10,6 +10,13 @@
 ## 읽어보면 좋은것
 - [ ] [FE & CS](https://yuchengkai.cn/docs/frontend)
 - [ ] [FE Performance](https://github.com/thedaviddias/Front-End-Performance-Checklist)
+# 2018-10-08 ~ 2018-10-14
+## 풀이한 문제 목록
+* BOJ 백준온라인져지 15486 퇴사 2 풀이
+* BOJ 백준온라인져지 1322 X와 K 풀이
+## 생각
+1. 알고리즘은 나중에 다시 공부하고 일단 자료구조부터 다시 공부하는건 어떨까?
+2. Technical interview 를 작성하는것이 더 재미있다.
 # 2018-10-01 ~ 2018-10-07
 ## 풀이한 문제 목록
 * BOJ 백준온라인져지 2266 금고 테스트 풀이
